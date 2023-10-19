@@ -43,20 +43,31 @@ class MainActivity : AppCompatActivity() {
     }
 
 private fun getPokeImageURL() {
-        val client = AsyncHttpClient()
-        client.get("https://pokeapi.co/api/v2/pokemon/ditto", object : JsonHttpResponseHandler() {
-            override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
-                // Initialize 'pokeImageURL' using data from the JSON response
-                val pokeImageURL = json.jsonObject.getString("message")
-                Log.d("Poke", "response successful$pokeImageURL")
+    val randomPokemonId = (1..898).random()
 
-                // Now, you can use 'pokeImageURL' or pass it to another function
-            }
+    val client = AsyncHttpClient()
+    val apiUrl = "https://pokeapi.co/api/v2/pokemon/$randomPokemonId/"
 
-            override fun onFailure(statusCode: Int, headers: Headers?, errorResponse: String, throwable: Throwable?) {
-                Log.d("Poke Error", errorResponse)
-            }
-        })
+    client.get(apiUrl, object : JsonHttpResponseHandler() {
+        override fun onSuccess(statusCode: Int, headers: Headers, json:JSON) {
+            Log.d("poke", "response successful$json")
+
+            val imageURL = json.jsonObject.getJSONObject("sprites")
+                .getString("front_default")
+            Log.d("pokeImageURL", "poke image URL: $imageURL")
+
+            pokeImageURL = imageURL
+        }
+
+        override fun onFailure(
+            statusCode: Int,
+            headers: Headers?,
+            errorResponse: String,
+            throwable: Throwable?
+        ) {
+            Log.d("poke Error", "Error: $errorResponse")
+        }
+    })
     }
 
 
