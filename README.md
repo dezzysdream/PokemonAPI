@@ -1,18 +1,16 @@
-# PokemonAPI
-
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
 
-# AND101 Project 5 - Choose Your Own API
+# AND101 Project 6 - CYOAPI Part 2: RecyclerView Edition
 
 Submitted by: **Dantes Nava**
 
-Time spent: **6** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Summary
 
-**Pokemon Generator** is an android app that **An app that displays a random character from the Pokemon API**
+**Poke API** is an android app that **An app that displays a scrollable list of Pokemon Characters!**
 
-If I had to describe this project in three (3) emojis, they would be: **🦝🐇🦑**
+If I had to describe this project in three (3) emojis, they would be: **🫠🌈🐙**
 
 ## Application Features
 
@@ -20,27 +18,23 @@ If I had to describe this project in three (3) emojis, they would be: **🦝🐇
 
 The following REQUIRED features are completed:
 
-- [X] Make an API call to an API of your choice using AsyncHTTPClient
-- [] Display at least three (3) pieces of data for each API entry retrieved
-- [X] A working Button requests a new API entry and updates the data displayed
+- [x] Make an API call to an API of your choice using AsyncHTTPClient
+- [x] Implement a RecyclerView to display a list of entries from the API
+- [x] Display at least three (3) pieces of data for each RecyclerView item
 
 The following STRETCH features are implemented:
 
-- [ ] Add a query to the API request
-  - The query I added is **FILL IN HERE**
-- [ ] Build a UI to allow users to add that query
+- [ ] Add a UI element for the user to interact with API further
+- [ ] Show a `Toast` or `Snackbar` when an item is clicked
+- [ ] Add item dividers with `DividerItemDecoration`
 
 
-
-## API Choice
-
-My chosen API for this project is **Poke API: *"https://pokeapi.co/api/v2/pokemon/$randomPokemonId/"*.
 
 ## Video Demo
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-https://imgur.com/okcojjg
+[img]https://i.imgur.com/7OiC7mb.gif[/img]
 
 GIF created with **Screen To Gif**
 
@@ -49,7 +43,9 @@ GIF created with **Screen To Gif**
 - [ScreenToGif](https://www.screentogif.com/) for Windows
 - [peek](https://github.com/phw/peek) for Linux. -->
 
-
+## Notes
+As a long time Pokemon fan, I've thoroughly enjoyed this app and its creation process. It is fantastic and fun being able to look over each pokemon and their individual abilities.
+Because pokemomn are so unique from one another, I believe both enthusiasts and pro players can benefit from this app and being able to read in more detail about their attributes. 
 
 ## License
 
