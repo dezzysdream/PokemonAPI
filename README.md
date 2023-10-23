@@ -22,11 +22,7 @@ The following REQUIRED features are completed:
 - [x] Implement a RecyclerView to display a list of entries from the API
 - [x] Display at least three (3) pieces of data for each RecyclerView item
 
-The following STRETCH features are implemented:
 
-- [ ] Add a UI element for the user to interact with API further
-- [ ] Show a `Toast` or `Snackbar` when an item is clicked
-- [ ] Add item dividers with `DividerItemDecoration`
 
 
 
