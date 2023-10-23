@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!-- res/layout/pokemon_item.xml -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="209dp"
+        android:layout_height="209dp" />
+
+    <TextView
+        android:id="@+id/pokemonName"
+        android:layout_width="69dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/pokemonAbility"
+        android:layout_width="70dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp" />
+</LinearLayout>

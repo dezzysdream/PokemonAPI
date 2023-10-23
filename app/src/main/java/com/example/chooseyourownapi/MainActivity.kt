@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
@@ -14,61 +16,60 @@ import okhttp3.Headers
 
 
 class MainActivity : AppCompatActivity() {
-    private var pokeImageURL = ""
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: PokemonAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        getPokeImageURL()
-        val myButton: Button = findViewById(R.id.pokeButton)
-        val myImage: ImageView = findViewById(R.id.Pikachu)
+        recyclerView = findViewById(R.id.pokemonRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        adapter = PokemonAdapter()
+        recyclerView.adapter = adapter
 
-        getNextImage(myButton, myImage)
-
+        loadRandomPokemon()
     }
 
+    private fun loadRandomPokemon() {
+        for (i in 1..10) { //Load 10 random Pokemon (you can adjust the number)
+        val randomPokemonId = (1..898).random()
+        val apiUrl = "https://pokeapi.co/api/v2/pokemon/$randomPokemonId/"
 
+        val client = AsyncHttpClient()
+        client.get(apiUrl, object : JsonHttpResponseHandler() {
+            override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
+                val name = json.jsonObject.getString("name")
+                val imageURL = json.jsonObject.getJSONObject("sprites")
+                    .getString("front_default")
+                val abilities = json.jsonObject.getJSONArray("abilities")
 
-    private fun getNextImage(button: Button, imageView: ImageView) {
+                val abilityNames = (0 until abilities.length()).map {
+                    abilities.getJSONObject(it).getJSONObject("ability").getString("name")
+                }
 
-        button.setOnClickListener {
-            getPokeImageURL()
+                val pokemonEntry = PokemonEntry(name, imageURL, abilityNames.joinToString(", "))
 
-            Glide.with(this)
-                .load(pokeImageURL)
-                .fitCenter()
-                .into(imageView)
-        }
+                adapter.addPokemon(pokemonEntry)
+            }
 
+            override fun onFailure(
+                statusCode: Int,
+                headers: Headers?,
+                errorResponse: String,
+                throwable: Throwable?
+            ) {
+                Log.d("poke Error", "Error: $errorResponse")
+            }
+        })
     }
-
-private fun getPokeImageURL() {
-    val randomPokemonId = (1..898).random()
-
-    val client = AsyncHttpClient()
-    val apiUrl = "https://pokeapi.co/api/v2/pokemon/$randomPokemonId/"
-
-    client.get(apiUrl, object : JsonHttpResponseHandler() {
-        override fun onSuccess(statusCode: Int, headers: Headers, json:JSON) {
-            Log.d("poke", "response successful$json")
-
-            val imageURL = json.jsonObject.getJSONObject("sprites")
-                .getString("front_default")
-            Log.d("pokeImageURL", "poke image URL: $imageURL")
-
-            pokeImageURL = imageURL
-        }
-
-        override fun onFailure(
-            statusCode: Int,
-            headers: Headers?,
-            errorResponse: String,
-            throwable: Throwable?
-        ) {
-            Log.d("poke Error", "Error: $errorResponse")
-        }
-    })
-    }
-
-
 }
+
+
+    data class PokemonEntry(
+        val name: String,
+        val imageURL: String,
+        val ability: String
+    )}
+
+
