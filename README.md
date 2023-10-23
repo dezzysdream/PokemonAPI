@@ -30,7 +30,7 @@ The following REQUIRED features are completed:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-[img]https://i.imgur.com/7OiC7mb.gif[/img]
+https://i.imgur.com/7OiC7mb.gif
 
 GIF created with **Screen To Gif**
 
