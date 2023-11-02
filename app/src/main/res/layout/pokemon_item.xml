@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
     <!-- res/layout/pokemon_item.xml -->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/pokemonImage"
@@ -12,15 +13,28 @@
 
     <TextView
         android:id="@+id/pokemonName"
-        android:layout_width="69dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="16dp"
-        android:textSize="16sp" />
+        android:layout_width="162dp"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@id/pokemonImage"
+        android:fontFamily="@font/rubik_mono_one"
+        android:lineSpacingExtra="8sp"
+        android:textColor="#F44336"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.Quote"/>
 
     <TextView
         android:id="@+id/pokemonAbility"
-        android:layout_width="70dp"
-        android:layout_height="94dp"
+        android:layout_width="178dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/pokemonName"
         android:layout_marginStart="8dp"
-        android:textSize="14sp" />
-</LinearLayout>
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/pokemonImage"
+        android:textSize="14sp"
+        android:textAppearance="@style/TextAppearance.Quote"/>
+
+
+</RelativeLayout>
