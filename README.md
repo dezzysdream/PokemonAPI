@@ -28,8 +28,8 @@ The following REQUIRED features are completed:
 ## Video Demo
 
 Here's a video / GIF that demos all of the app's implemented features:
+![Demo](https://imgur.com/a/poke-api-recycler-view-N5i4Lvd)
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/N5i4Lvd"  ><a href="//imgur.com/a/N5i4Lvd">Poke API (Recycler view)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 GIF created with **Imgur**
 
