@@ -29,6 +29,8 @@ The following REQUIRED features are completed:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
+![PokeAPI](https://github.com/user-attachments/assets/45b03787-379d-46f6-83a4-8bb5947a55ec)
+
 GIF created with **Imgur**
 
 <!-- Recommended tools:
