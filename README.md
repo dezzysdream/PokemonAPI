@@ -29,9 +29,9 @@ The following REQUIRED features are completed:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-https://i.imgur.com/sMiDeDS.gif
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/N5i4Lvd"  ><a href="//imgur.com/a/N5i4Lvd">Poke API (Recycler view)</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
-GIF created with **ScreenToGif**
+GIF created with **Imgur**
 
 <!-- Recommended tools:
 - [Kap](https://getkap.co/) for macOS
