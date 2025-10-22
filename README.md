@@ -16,7 +16,7 @@ If I had to describe this project in three (3) emojis, they would be: **🐙🐇
 
 <!-- (This is a comment) Please be sure to change the [ ] to [x] for any features you completed.  If a feature is not checked [x], you might miss the points for that item! -->
 
-The following REQUIRED features are completed:
+
 
 - [X] App contains a RecyclerView that displays a list of scrollable data
 - [X] App displays at least two (2) pieces of data for each RecyclerView item
@@ -27,7 +27,6 @@ The following REQUIRED features are completed:
 
 ## Video Demo
 
-Here's a video / GIF that demos all of the app's implemented features:
 
 ![PokeAPI](https://github.com/user-attachments/assets/45b03787-379d-46f6-83a4-8bb5947a55ec)
 
