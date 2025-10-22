@@ -28,7 +28,7 @@ The following REQUIRED features are completed:
 ## Video Demo
 
 Here's a video / GIF that demos all of the app's implemented features:
-![Demo](https://imgur.com/a/poke-api-recycler-view-N5i4Lvd.gif)
+![Demo](https://i.imgur.com/a/poke-api-recycler-view-N5i4Lvd.gif)
 
 
 GIF created with **Imgur**
