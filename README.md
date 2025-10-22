@@ -8,7 +8,7 @@ Time spent: **10** hours spent in total
 
 ## Summary
 
-**PokeAPI** is an android app that **An app that displays a scrollable list of characters from the Pokemon Series!**
+**PokeAPI**  **An app that displays a scrollable list of characters from the Pokemon Series!**
 
 If I had to describe this project in three (3) emojis, they would be: **🐙🐇🦑**
 
